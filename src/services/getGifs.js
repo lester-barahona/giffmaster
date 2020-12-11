@@ -11,7 +11,8 @@ export default function getGifs({keyword='random'}={}){
         const {data}=resp
         const gifs=data.map(image=>{
                                 const {images,title,id}=image
-                                const {url}=images.downsized_medium
+                                 const {url}=images.downsized
+                                //const {url}=images.preview_gif
                                 return {title,id,url}
                             })
         return gifs;

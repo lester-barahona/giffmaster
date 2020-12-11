@@ -1,11 +1,13 @@
 
 .gif{
     position: relative;  
+    width: 100%;
+    min-height: 150px;
 }
 
 .gif img{
     width: 100%;
- 
+    height: 100%;
 }
 
 .gif-title{

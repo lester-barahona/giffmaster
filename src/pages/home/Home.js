@@ -12,7 +12,7 @@ const Home = ({history}) => {
 
     const [keyword,setKeyword]=useState('')
 
-    const [loading,gifs] = useGifs({keyword:'matrix'})
+    const [loading,gifs] = useGifs()
 
     const handleChange=e=>setKeyword(e.target.value)
 
