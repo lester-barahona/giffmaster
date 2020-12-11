@@ -1,0 +1,22 @@
+:root{
+    --colums-result:2;
+}
+
+.listOfGifs{
+    column-count: var(--colums-result);
+    gap: .5em;
+}
+
+
+
+@media (min-width: 600px){
+    :root{
+        --colums-result:3;
+    }
+}
+
+@media (min-width: 800px){
+    :root{
+        --colums-result:4;
+    }
+}
