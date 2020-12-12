@@ -1,0 +1,16 @@
+.app-header{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.app-logo{
+    display: flex;
+    align-items: center;
+    color: white;
+  
+}
+.app-logo>span{
+    font-weight: 500;
+}

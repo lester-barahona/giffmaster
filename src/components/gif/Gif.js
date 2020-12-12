@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.css'
+import './Gif.css'
 import { Link } from 'react-router-dom';
 
 const Gif = ({title,id,url}) => {

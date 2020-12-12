@@ -4,25 +4,23 @@
   padding: 0;
   box-sizing: border-box;
 }
-.App {
-  text-align: center;
+
+body{
+  font-family: 'Roboto', sans-serif;
+
 }
 
-.app-logo {
-  height: 80px;
-  margin: 2rem 0;
+.app-title{
+  margin-bottom: .5rem;
 }
 
 .app-content {
-  background-color: #282c34;
+  background-color: #121212;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
-  padding: 16px;
+  padding: 0 5%;
 }
 
 button{
@@ -31,11 +29,16 @@ button{
 
 
 a{
-  font-size: 24px;
   text-decoration: none;
-
+  color: white;
 }
 
-i{
-  font-size: 42px;
+li{
+  list-style: none;
+}
+
+/* utilities */
+
+.my-1{
+  margin: 1rem 0;
 }
