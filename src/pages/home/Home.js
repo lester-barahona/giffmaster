@@ -1,12 +1,9 @@
 import React,{useState} from 'react'
-import './index.css'
-import { Link } from 'react-router-dom';
-import { useGifs } from '../../hooks/useGifs';
-import ListOfGif from '../../components/listOfGifs/ListOfGif';
-import Spinner from './../../components/spinner/Spinner';
-
-
-const POPULAR_GIFS=['rick','phineas','one piece']
+import './Home.css'
+import { useGifs } from 'hooks/useGifs';
+import ListOfGif from 'components/listOfGifs/ListOfGif';
+import Spinner from 'components/spinner/Spinner';
+import TrendingSearches from 'components/trendingSearches/TrendingSearchesLazy';
 
 const Home = ({history}) => {
 
@@ -23,28 +20,25 @@ const Home = ({history}) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <input placeholder="Search a Gif here..." type="text" value={keyword} onChange={handleChange}/>
-                <button type="submit">Buscar</button>
+            
+            <form className="search-form" onSubmit={handleSubmit}>
+                
+                <input className="search-input" placeholder="Search a Gif here..." 
+                        type="text" value={keyword} 
+                        onChange={handleChange}/>
+
+                <button className="search-button" type="submit"><span className="material-icons">search</span></button>
             </form>
 
-            <h3 className="app-title">Los Gifs Más Populares</h3>
-            
-            <ul>
-                {
-                    POPULAR_GIFS.map(name=>(
-                        <li key={name}>
-                            <Link to={`/search/${name}`}>{name}</Link>
-                        </li>
-                    )
-                    )
-                }
-            </ul>
-
-            {
-                loading? <Spinner/> :  <ListOfGif gifs={gifs}/>
-            }
-           
+            <div className="app-main">
+                <div className="app-results">
+                    <h3 className="app-title">Última búsqueda</h3>
+                    { loading?  <Spinner/>  :  <ListOfGif gifs={gifs}/> }
+                </div>
+                <div className="app-categories-container">
+                    <TrendingSearches/>
+                </div> 
+           </div>
         </>
     )
 }

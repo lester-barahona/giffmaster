@@ -3,6 +3,7 @@
 }
 
 .listOfGifs{
+    width: 100%;
     column-count: var(--colums-result);
     gap: .5em;
 }

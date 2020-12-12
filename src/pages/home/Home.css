@@ -1,0 +1,47 @@
+.app-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto ;
+}
+.app-results{
+    min-height: 100vh;
+}
+.app-categories-container{
+    padding: 10px;
+}
+
+/* form */
+.search-form{
+    width: 100%;
+    margin: .8rem 0;
+    display: flex;
+}
+
+.search-input,.search-button{
+    border: none;
+    border-radius: 0;
+    outline: none;
+    height: 2rem;
+}
+.search-input{
+    width: calc(100% - 40px);
+    padding: .5rem;
+}
+.search-button{
+    width: 40px;
+    background: rgb(29,237,253);
+    background: linear-gradient(90deg, rgba(29,237,253,1) 0%, rgba(241,69,252,1) 100%);
+}
+
+.search-button>span{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+}
+
+@media screen and (max-width:920px){
+    
+    .app-main{
+        grid-template-columns: auto;
+    }
+}

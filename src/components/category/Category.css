@@ -1,0 +1,23 @@
+.category-container{
+    padding: 1rem;
+}
+
+.category-title{
+    font-size: 1.3rem
+}
+
+.category-options{
+ 
+    padding: 1rem;
+}
+
+.category-options>li{
+    padding:.3rem 0;
+}
+
+@media screen and (max-width:900px){
+    .category-options>li{
+        display: inline-block;
+        padding:.3rem;
+    }
+}

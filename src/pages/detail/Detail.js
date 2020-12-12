@@ -1,6 +1,6 @@
 import React,{useContext} from 'react'
-import Context from '../../context/GifsContext'
-import Gif from './../../components/gif/Gif';
+import Context from 'context/GifsContext'
+import Gif from 'components/gif/Gif';
 
 
 const Detail = ({match:{params}}) => {
