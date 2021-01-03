@@ -9,7 +9,7 @@ const Home = ({history}) => {
 
     const [keyword,setKeyword]=useState('')
 
-    const [loading,gifs] = useGifs()
+    const {loading,gifs} = useGifs({limit:16})
 
     const handleChange=e=>setKeyword(e.target.value)
 

@@ -4,8 +4,12 @@
 
 .listOfGifs{
     width: 100%;
-    column-count: var(--colums-result);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(var(--colums-result),1fr);
+    grid-template-rows: masonry;
     gap: .5em;
+    align-items: center;
 }
 
 

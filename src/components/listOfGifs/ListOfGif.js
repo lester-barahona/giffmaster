@@ -7,9 +7,9 @@ const ListOfGif = ({gifs}) => {
 
     return <div className="listOfGifs"> 
               {
-                gifs.map(({id,title,url})=>{
+                gifs.map(({id,title,url},index)=>{
                         return <Gif 
-                                    key={id} 
+                                    key={`${index}-${id}`} 
                                     id={id}
                                     title={title} 
                                     url={url} 
