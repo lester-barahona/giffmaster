@@ -1,6 +1,6 @@
 import {useEffect,useState,useRef} from 'react'
 
-export const useNearScreen=({distance='100px'}={})=>{
+export const useNearScreen=({distance='100px',externalRef,once=true}={})=>{
     
     const [show, setshow] = useState(false)
     const elOb = useRef()
@@ -9,13 +9,17 @@ export const useNearScreen=({distance='100px'}={})=>{
         const el=entries[0]
         if(el.isIntersecting){
             setshow(true)
-            observer.disconnect()
+            once && observer.disconnect()
+        }else{
+            !once&&setshow(false)
         }     
     }
 
     useEffect(() => {
 
         let observer
+        const element=externalRef?externalRef.current:elOb.current
+
         //using polyfill for old browsers
         Promise.resolve(
             typeof IntersectionObserver === 'undefined' ?
@@ -23,7 +27,8 @@ export const useNearScreen=({distance='100px'}={})=>{
         ).then(()=>{
 
             observer =new IntersectionObserver(onChange,{rootMargin:distance})
-            observer.observe(elOb.current)
+            if(element)
+                observer.observe(element)
         })
 
         return ()=>observer && observer.disconnect() //for when the element is not rendered

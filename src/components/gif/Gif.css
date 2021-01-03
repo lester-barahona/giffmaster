@@ -2,7 +2,8 @@
 .gif{
     position: relative;  
     width: 100%;
-   
+    display: inline-block;
+    height: auto;
 }
 .gif img{
     width: 100%;
@@ -18,13 +19,4 @@
     left: 0;
     bottom:4px;
     border-radius: 0 3px 0 0;
-}
-
-.listOfGifs-item{
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-    break-inside: avoid;
-    background-color: white;
-    display: inline-block;
-    width: 100%;
 }
