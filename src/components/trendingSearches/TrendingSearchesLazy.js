@@ -11,7 +11,7 @@ export default function TrendingSearchesLazy(){
     //using suspense for asynchronous import fallback
     return <div ref={elOb}>
                 <Suspense fallback={<Spinner/>}> 
-                    {show ? <TrendingSearches/> : <Spinner/> }
+                    {show ? <TrendingSearches/> :   }
                 </Suspense>
            </div>
 }
